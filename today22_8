@@ -1,0 +1,33 @@
+xterm- then open a new xterm window you cant edit previous terminal
+use jobs command 
+use kill and type process id for stop process
+----------
+Automatic process
+shedule every day tasks by using commands at
+Daemons sarver processors
+----------
+Process Attributes 
+Process id and Parent Process id
+commands- ps   ps -af
+command ps gives basic informations
+commmand ps -ef gives what are the processors run on the OS
+ps -ef | grep root
+we can filter what are the processors run in root
+top command shows-- how many tasks are running how many tasks are in the state of 
+--------------------------------
+Sheduling Processes
+CORN
+using vi/etc/crontab
+There are 6 attributes to shedule the task for everyday 
+Backup your home directory on every weekdays at 11.30 pm
+--------------------------------------------------------
+
+c-create z- zipped c-verbose f- single file
+udo mkdir /tmp/mybackup
+cscuser@cscuser:~$ sudo tar -czvf /tmp/mybackup/mydata.tgz/home/cscuser/
+ls -l/tmp/mybackup/
+
+
+---------------------------
+vi/etc/crontab
+30 23 ** 1,2,3,4,5 root tar -czvf /tmp/mybackup/mydata.tgz /home/cscuser
