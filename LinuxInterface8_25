@@ -1,0 +1,48 @@
+ifconfig - we can see the what are the interface in our computer and ip addresses
+ifconfig -a = get all the information
+ifconfig (inteface key)enp1s0
+ ifconfig enp1s0
+enp1s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.20.70.106  netmask 255.255.255.0  broadcast 10.20.70.255
+        inet6 fe80::be83:7b33:9373:53d1  prefixlen 64  scopeid 0x20<link>
+        ether 80:e8:2c:d3:e1:4f  txqueuelen 1000  (Ethernet)
+        RX packets 15114  bytes 10437668 (10.4 MB)
+        RX errors 0  dropped 213  overruns 0  frame 0
+        TX packets 5603  bytes 1088441 (1.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+-----------------------------------------------------------------------------------------------
+change the ip address- 
+cscuser@cscuser:~$ sudo ifconfig enp1s0 10.20.70.106 192.168.1.1 netmask 255.255.0.0 up
+[sudo] password for cscuser: 
+cscuser@cscuser:~$ ifconfig enp1s0
+enp1s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.1  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::be83:7b33:9373:53d1  prefixlen 64  scopeid 0x20<link>
+        ether 80:e8:2c:d3:e1:4f  txqueuelen 1000  (Ethernet)
+        RX packets 15489  bytes 10488407 (10.4 MB)
+        RX errors 0  dropped 221  overruns 0  frame 0
+        TX packets 5712  bytes 1105501 (1.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+when we change the ip address we lost the internet
+agin get connection and showtdown
+sudo ifconfig enp1s0 down - showtdown interface
+sudo ifconfig enp1s0 up - up interface
+--------------------------------------------------------------
+specify the nameserver-
+MAc address -physical address 
+--- man ifconfig---descriprtion
+ifconfig -a = we can seee all the interfaces wireless interface
+see the mac address the interface-mac address infoMation
+---------------------------------------------
+command
+arp = address resolution protocol
+arp -a
+Dns we use convert ip adddress to name arp use to map the ip address to mac address (HardwAre address)
+----------------------------------------------------------------------------
+ping command use to check connectivity some other computers
+ping 10.27.2.33(dsetination ip address)
+usin crt+C - then we can see how many packets reached and losses 
+
+
+
+

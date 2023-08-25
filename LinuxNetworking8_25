@@ -1,0 +1,39 @@
+2023/8/25
+Linux Networking
+create a system group
+$ man grouped
+No manual entry for grouped
+cscuser@cscuser:~$ sudo groupadd -g 2000 Thirdyearstudents
+[sudo] password for cscuser: 
+groupadd: GID '2000' already exists
+cscuser@cscuser:~$ sudo groupadd -g 3000 Secondyearstudents
+cscuser@cscuser:~$
+---------------------
+vi/etc/group-configuration file we can see the group what we create
+configuration file to manage user account
+--------------------------------
+vi /etc/passwd
+----vi /etc/passwd
+cscuser:x:1000:1000:cscuser,,,:/home/cscuser:/bin/bash
+anna:x:2001:2000:Miss Anna:/home/anna:/bin/sh
+this is include user id and group id
+------------------------------
+man useradd-- from this command we can see the user options
+sudo useradd -c "Mr. S.Riff" -g 3000 -s /bin/bash -u 3001 riffath
+create a new user and give a paaword for login
+sudo passwd riffath
+sudo vi /etc/shadow- from this code we can see all the password in encrypted way
+
+----------------------------------------------
+lab Excersise 3
+____________________ 
+view all created accounts-- move accounts to some other account=su kavin (su- switch user)
+all created accounts are listed - (type who)
+we can see the users from the terminal
+--------------------------------------
+sudo userdel anne(account name)- delete user what we created
+exit- we can exit from a user account
+sudo groupdel Thirdyer(group name)
+
+
+
